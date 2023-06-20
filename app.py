@@ -1,3 +1,8 @@
 from litestar import Litestar
+from litestar import Controller
 
-app = Litestar()
+
+from users.controller import UserController
+
+
+app = Litestar(route_handlers=[UserController])
